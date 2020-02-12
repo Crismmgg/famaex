@@ -2,6 +2,8 @@ import React from 'react';
 import '../stylesheets/App.scss';
 import ReportsInfo from '../services/ReportsData';
 import Reports from './Reports';
+import Header from './Header';
+import Footer from './Footer';
 
 class App extends React.Component {
   constructor(props) {
@@ -21,10 +23,11 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.reports)
     return (
-      <div className="App">
+      <div className="app">
+        <Header />
         <Reports reports={this.state.reports} />
+        <Footer />
       </div>
     );
   }

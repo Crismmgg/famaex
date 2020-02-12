@@ -1,17 +1,12 @@
 .reports {
   &__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
-    padding: 40px;
+    padding: 0;
   }
   &__list {
-    width: 200px;
+    width: 100%;
     padding: 15px;
-    border-top: grey solid 2px;
-    border-bottom: grey solid 2px;
-    margin: 3px;
+    border-top: rgb(190, 189, 189) solid 2px;
+    border-bottom: rgb(190, 189, 189) solid 2px;
+    margin: 3px 0 3px 0;
   }
 }

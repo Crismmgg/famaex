@@ -1,6 +1,18 @@
+@import './header.scss';
 @import './reports.scss';
+@import './footer.scss';
 
 * {
   margin: 0;
   list-style: none;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
 }
