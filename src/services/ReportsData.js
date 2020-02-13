@@ -1,4 +1,4 @@
-const ENDPOINT = 'http://5dfb6cf80301690014b8fb0a.mockapi.io/api/v1/reports'
+const ENDPOINT = 'https://5dfb6cf80301690014b8fb0a.mockapi.io/api/v1/reports'
 
 export default () => {
   return fetch(ENDPOINT)
