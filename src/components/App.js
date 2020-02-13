@@ -22,11 +22,22 @@ class App extends React.Component {
       })
   }
 
+  orderByCreateDate() {
+    const reports = [...this.state.reports]
+    return reports.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt))
+  }
+
+  orderById() {
+    const reports = [...this.state.reports]
+    return reports.sort((a, b) => (a.id) - (b.id))
+
+  }
+
   render() {
     return (
       <div className="app">
         <Header />
-        <Reports reports={this.state.reports} />
+        <Reports reports={this.orderById()} />
         <Footer />
       </div>
     );

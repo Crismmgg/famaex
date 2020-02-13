@@ -1,12 +1,50 @@
 .reports {
   &__container {
     padding: 0;
+    @media all and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 5px;
+      height: 100%;
+      margin-top: 7px;
+    }
   }
   &__list {
     width: 100%;
-    padding: 15px;
-    border-top: rgb(190, 189, 189) solid 2px;
-    border-bottom: rgb(190, 189, 189) solid 2px;
-    margin: 3px 0 3px 0;
+    &__0,
+    &__1,
+    &__2,
+    &__3 {
+      padding: 15px;
+      border-top: rgb(190, 189, 189) solid 2px;
+      border-bottom: rgb(190, 189, 189) solid 2px;
+      margin: 3px 0 3px 0;
+      @media all and (min-width: 768px) {
+        border: rgb(190, 189, 189) solid 2px;
+        text-align: flex-start;
+        padding: 20px;
+        height: 100%;
+      }
+    }
+    &__0 {
+      @media all and (min-width: 768px) {
+        grid-row: span 12;
+      }
+    }
+    &__1 {
+      @media all and (min-width: 768px) {
+        grid-row: span 10;
+      }
+    }
+    &__2 {
+      @media all and (min-width: 768px) {
+        grid-row: span 12;
+      }
+    }
+    &__3 {
+      @media all and (min-width: 768px) {
+        grid-row: span 2;
+      }
+    }
   }
 }

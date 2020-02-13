@@ -3,4 +3,8 @@
   padding: 15px;
   text-align: center;
   border-top: rgb(190, 189, 189) solid 2px;
+  @media all and (min-width: 768px) {
+    position: absolute;
+    bottom: 0;
+  }
 }
