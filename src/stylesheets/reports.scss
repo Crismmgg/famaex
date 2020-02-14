@@ -47,4 +47,15 @@
       }
     }
   }
+  &__order {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    padding-bottom: 10px;
+    @media all and (min-width: 768px) {
+      padding-top: 20px;
+    }
+  }
 }
