@@ -10,7 +10,7 @@ El objetivos es crear un proyecto en React con el layout adjunto (mobile y deskt
 
 
 
-
+---------
 
 
 
