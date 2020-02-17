@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Reports(props) {
-  const handleOrder = (ev) => {
-    props.handleOrder({
-      inputOrder: ev.target.value
+  const handleSort = (ev) => {
+    props.handleSort({
+      inputSort: ev.target.value
     })
   }
   return (
@@ -25,8 +25,8 @@ function Reports(props) {
 
       <div className='reports__order'>
         <select
-          onChange={handleOrder}
-          value={props.orderValue}>
+          onChange={handleSort}
+          value={props.sortValue}>
           <option value='id'>By id</option>
           <option value='date'>By date</option>
         </select>
@@ -36,8 +36,8 @@ function Reports(props) {
 }
 Reports.propTypes = {
   reports: PropTypes.arrayOf(PropTypes.object),
-  handleOrder: PropTypes.func,
-  orderValue: PropTypes.string
+  handleSort: PropTypes.func,
+  sortValue: PropTypes.string
 }
 
 export default Reports;

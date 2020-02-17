@@ -10,7 +10,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       reports: [],
-      inputOrder: 'id'
+      inputSort: 'id'
     }
   }
 
@@ -23,17 +23,17 @@ class App extends React.Component {
       })
   }
   //handler
-  handleOrder = (inputOrder) => {
+  handleSort = (inputSort) => {
     this.setState(
-      inputOrder
+      inputSort
     )
   }
 
-  //criteria order
-  orderedReports() {
+  //sort criteria
+  sortedReports() {
     const reports = [...this.state.reports]
-    const orderBy = this.state.inputOrder
-    return orderBy === 'id' ? reports.sort((a, b) => (a.id) - (b.id)) : reports.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt))
+    const sortBy = this.state.inputSort
+    return sortBy === 'id' ? reports.sort((a, b) => (a.id) - (b.id)) : reports.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt))
   }
 
   //render
@@ -42,9 +42,9 @@ class App extends React.Component {
       <div className="app">
         <Header />
         <Reports
-          reports={this.orderedReports()}
-          handleOrder={this.handleOrder}
-          orderValue={this.state.inputOrder} />
+          reports={this.sortedReports()}
+          handleSort={this.handleSort}
+          sortValue={this.state.inputSort} />
         <Footer />
       </div>
     );
